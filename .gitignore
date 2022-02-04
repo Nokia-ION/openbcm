@@ -7,3 +7,6 @@ bcm/sdk*
 sdk
 libbcmsdk*
 openbcm/
+nfpm-dbg.yaml
+nfpm-dev.yaml
+nfpm.yaml

@@ -4,26 +4,30 @@
 #  Copyright (c) 2021 Nokia
 #############################################################################
 
-# Package for library binary distribution
+# Package for development headers and libraries
 
-name: "libbcmsdk-dbg"
+name: "libbcmsdk-dev"
 arch: "amd64"
 platform: "linux"
-version: "v1.0.0"
+version: "v%SDK_VERSION%"
 section: "default"
 priority: "extra"
 replaces:
-- libbcmsdk-dbg
+- libbcmsdk-dev
 provides:
-- libbcmsdk-dbg
+- libbcmsdk-dev
 maintainer: "Jon Goldberg <jon.goldberg@nokia.com>"
 description: |
-  Broadcom XGS Library (debug)
+  Broadcom XGS Library and Development Headers
 vendor: "Broadcom"
 license: "Broadcom"
 contents:
-   - src: ./libbcmsdk.so.1.debug
+   - src: ./libbcmsdk.so.1
      dst: /usr/lib/libbcmsdk.so
    - src: ./openbcm/Legal/
      dst: /usr/share/bcmsdk/
+   - src: ./sdk/include/
+     dst: /usr/include/bcmsdk/
+   - src: ./sdk/systems/bde/linux/include/
+     dst: /usr/include/bcmsdk/systems/bde/linux/include
 

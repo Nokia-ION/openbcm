@@ -9,7 +9,7 @@
 name: "libbcmsdk"
 arch: "amd64"
 platform: "linux"
-version: "v1.0.0"
+version: "v%SDK_VERSION%"
 section: "default"
 priority: "extra"
 replaces:
